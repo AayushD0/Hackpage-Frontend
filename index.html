@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code The Future — H2S Innovation Hackathon</title>
+  <meta name="description" content="Join the H2S Innovation Hackathon. Code the future with cutting-edge challenges in AI, sustainability, and emerging tech." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Custom cursor (hidden on touch) -->
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════ -->
+<header id="site-header" role="banner">
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <a href="#hero" class="nav-logo" aria-label="H2S Hackathon home">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor"/>
+        </svg>
+        <span>H2S</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#how-to">How to Participate?</a></li>
+        <li><a href="#challenges">Challenges</a></li>
+        <li><a href="#schedule">Schedules</a></li>
+        <li><a href="#rewards">Rewards</a></li>
+        <li><a href="#faq">FAQs</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://hack2skill.com" class="btn-register" target="_blank" rel="noopener noreferrer">Register Now</a>
+        <button id="hamburger" class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div><!-- /nav-inner -->
+
+    <div id="mobile-nav" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+      <ul role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#how-to">How to Participate?</a></li>
+        <li><a href="#challenges">Challenges</a></li>
+        <li><a href="#schedule">Schedules</a></li>
+        <li><a href="#rewards">Rewards</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="https://hack2skill.com" class="mob-register" target="_blank" rel="noopener noreferrer">Register Now ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<main>
+<section id="hero" aria-label="Hero — Code The Future">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <!-- Animated waves background (right side) -->
+  <div class="hero-waves" aria-hidden="true">
+    <img src="./assets/purple-waves.jpg" alt="" />
+    <div class="hero-waves-fade"></div>
+  </div>
+
+  <div class="hero-inner">
+    <!-- Left: Figure -->
+    <div class="hero-figure-col">
+      <div class="hero-figure-glow" aria-hidden="true"></div>
+      <figure class="hero-figure">
+        <img
+          src="./assets/hero-figure.jpg"
+          alt="Futuristic innovator in purple"
+          width="480"
+          height="720"
+          loading="eager"
+        />
+      </figure>
+      <p class="hero-subtitle">WHERE INNOVATION BECOMES REALITY</p>
+    </div>
+
+    <!-- Right: Copy -->
+    <div class="hero-copy">
+      <h1 class="hero-heading">
+        CODE THE<br />
+        <span class="hero-future">FUTURE</span>
+      </h1>
+      <p class="hero-desc">
+        An exhilarating platform designed to foster innovation and creativity in advanced technology and futuristic solutions.
+      </p>
+      <a href="https://hack2skill.com" class="btn-primary hero-cta" target="_blank" rel="noopener noreferrer">Register Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHO CAN PARTICIPATE
+═══════════════════════════════════════════ -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="section-inner">
+    <div class="section-tag reveal">ABOUT HACKATHON</div>
+    <h2 id="about-heading" class="section-heading reveal">WHO CAN<br/>PARTICIPATE?</h2>
+    <p class="section-desc reveal">
+      Welcome to the H2S Innovation Hackathon, an exhilarating platform designed to foster innovation
+      and creativity in the domain of advanced technology and futuristic solutions. Organised by the
+      National Centre for Applied Research and supported by Hack2skill, this hackathon invites
+      undergraduate students, graduate/postgraduate students, and PhD researchers to collaborate
+      and solve critical challenges.
+    </p>
+    <a href="https://hack2skill.com" class="btn-primary reveal" target="_blank" rel="noopener noreferrer">Apply Now</a>
+
+    <div class="participant-grid">
+      <article class="participant-card reveal" tabindex="0">
+        <p>Undergraduate<br/>Students</p>
+      </article>
+      <article class="participant-card reveal" tabindex="0">
+        <p>Graduate / Postgraduate<br/>Students</p>
+      </article>
+      <article class="participant-card reveal" tabindex="0">
+        <p>PhD Students /<br/>Research Scholars</p>
+      </article>
+    </div>
+
+    <p class="participant-note reveal">
+      Note: Working Professionals are not eligible to participate in the hackathon.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHAT IS THE HACKATHON
+═══════════════════════════════════════════ -->
+<section id="what" aria-labelledby="what-heading" class="section-alt">
+  <div class="what-inner">
+    <!-- Left: Text + Countdown -->
+    <div class="what-text">
+      <h2 id="what-heading" class="section-heading reveal">WHAT IS THE<br/>HACKATHON?</h2>
+      <p class="section-desc reveal">
+        The H2S Innovation Hackathon is a flagship event crafted to uncover pioneering ideas in science, technology,
+        and system design. As technological advancements accelerate globally, this initiative aims to bridge
+        academic knowledge with practical implementation.
+      </p>
+      <p class="section-desc reveal" style="margin-top:1rem;">
+        Participants will work on challenge statements designed by leading R&amp;D units, applying theoretical
+        expertise to build innovative prototypes and solutions with potential real-world application.
+      </p>
+
+      <div class="countdown-block reveal">
+        <p class="countdown-label">Submission Closing In:</p>
+        <div class="countdown-row">
+          <div class="cd-unit">
+            <span id="cd-days" class="cd-num">00</span>
+            <span class="cd-lbl">Days</span>
+          </div>
+          <span class="cd-sep" aria-hidden="true">:</span>
+          <div class="cd-unit">
+            <span id="cd-hours" class="cd-num">00</span>
+            <span class="cd-lbl">Hours</span>
+          </div>
+          <span class="cd-sep" aria-hidden="true">:</span>
+          <div class="cd-unit">
+            <span id="cd-mins" class="cd-num">00</span>
+            <span class="cd-lbl">Mins</span>
+          </div>
+          <span class="cd-sep" aria-hidden="true">:</span>
+          <div class="cd-unit">
+            <span id="cd-secs" class="cd-num">00</span>
+            <span class="cd-lbl">Secs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="what-ctas reveal">
+        <a href="https://hack2skill.com" class="btn-primary" target="_blank" rel="noopener noreferrer">Register Now</a>
+        <a href="#challenges" class="btn-outline">View Challenges</a>
+      </div>
+    </div>
+
+    <!-- Right: Gallery grid -->
+    <div class="what-gallery reveal" role="list" aria-label="Hackathon gallery">
+      <div class="gal-item" role="listitem">
+        <div class="gal-inner">
+          <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=600&q=80" alt="Hackathon coding session" loading="lazy" class="gal-img" />
+          <div class="gal-overlay" aria-hidden="true">
+            <div class="ch tl"></div><div class="ch tr"></div>
+            <div class="ch bl"></div><div class="ch br"></div>
+            <div class="gal-shine"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gal-item" role="listitem">
+        <div class="gal-inner">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=600&q=80" alt="Technology innovation" loading="lazy" class="gal-img" />
+          <div class="gal-overlay" aria-hidden="true">
+            <div class="ch tl"></div><div class="ch tr"></div>
+            <div class="ch bl"></div><div class="ch br"></div>
+            <div class="gal-shine"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gal-item" role="listitem">
+        <div class="gal-inner">
+          <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=600&q=80" alt="Team collaboration" loading="lazy" class="gal-img" />
+          <div class="gal-overlay" aria-hidden="true">
+            <div class="ch tl"></div><div class="ch tr"></div>
+            <div class="ch bl"></div><div class="ch br"></div>
+            <div class="gal-shine"></div>
+          </div>
+        </div>
+      </div>
+      <div class="gal-item" role="listitem">
+        <div class="gal-inner">
+          <img src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?w=600&q=80" alt="Presentation" loading="lazy" class="gal-img" />
+          <div class="gal-overlay" aria-hidden="true">
+            <div class="ch tl"></div><div class="ch tr"></div>
+            <div class="ch bl"></div><div class="ch br"></div>
+            <div class="gal-shine"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHY PARTICIPATE  (Req 1: astronaut rings)
+═══════════════════════════════════════════ -->
+<section id="why" aria-labelledby="why-heading">
+  <div class="section-inner">
+    <div class="section-tag reveal">WHY PARTICIPATE?</div>
+    <h2 id="why-heading" class="sr-only">Why Participate</h2>
+
+    <div class="why-grid">
+      <!-- Left benefit cards -->
+      <div class="why-cards why-left">
+        <article class="benefit-card benefit-card--purple reveal" tabindex="0">
+          <h3>Mentorship from Experts</h3>
+          <p>Gain invaluable insights and guidance from experienced technologists and domain experts.</p>
+        </article>
+        <article class="benefit-card benefit-card--dark reveal" tabindex="0">
+          <h3>Networking</h3>
+          <p>Connect with peers, professionals, and innovation leaders from across the nation.</p>
+        </article>
+      </div>
+
+      <!-- Centre: astronaut + animated rings -->
+      <div class="why-center reveal" aria-label="Floating astronaut illustration">
+        <!-- Requirement 1: Pulsing rings BEHIND the astronaut -->
+        <div class="astro-rings-wrap" aria-hidden="true">
+          <div class="astro-ring astro-ring-1"></div>
+          <div class="astro-ring astro-ring-2"></div>
+          <div class="astro-ring astro-ring-3"></div>
+          <div class="astro-ring astro-ring-4"></div>
+          <!-- Orbiting dots -->
+          <div class="orbit orbit-1" aria-hidden="true"><span class="orbit-dot orbit-dot--lg"></span></div>
+          <div class="orbit orbit-2" aria-hidden="true"><span class="orbit-dot orbit-dot--sm"></span></div>
+          <div class="orbit orbit-3" aria-hidden="true"><span class="orbit-dot orbit-dot--md"></span></div>
+          <!-- Glow base -->
+          <div class="astro-glow"></div>
+          <!-- Twinkling stars -->
+          <span class="star s1" aria-hidden="true"></span>
+          <span class="star s2" aria-hidden="true"></span>
+          <span class="star s3" aria-hidden="true"></span>
+          <span class="star s4" aria-hidden="true"></span>
+          <span class="star s5" aria-hidden="true"></span>
+          <span class="star s6" aria-hidden="true"></span>
+          <span class="star s7" aria-hidden="true"></span>
+          <span class="star s8" aria-hidden="true"></span>
+        </div>
+
+        <figure class="astro-figure">
+          <img
+            src="./assets/astronaut.png"
+            alt="Floating astronaut"
+            loading="lazy"
+            class="astro-img"
+          />
+        </figure>
+      </div>
+
+      <!-- Right benefit cards -->
+      <div class="why-cards why-right">
+        <article class="benefit-card benefit-card--purple reveal" tabindex="0">
+          <h3>Internship Opportunities</h3>
+          <p>Stand a chance to secure internships at top institutions and innovation labs.</p>
+        </article>
+        <article class="benefit-card benefit-card--dark reveal" tabindex="0">
+          <h3>Real-World Impact</h3>
+          <p>Contribute to meaningful challenges that aim to improve lives and systems at scale.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     HOW TO PARTICIPATE
+═══════════════════════════════════════════ -->
+<section id="how-to" aria-labelledby="howto-heading" class="section-alt">
+  <div class="section-inner">
+    <div class="section-tag reveal">HOW TO PARTICIPATE?</div>
+    <h2 id="howto-heading" class="section-heading reveal">Step-by-step process</h2>
+
+    <ol class="steps-row" role="list">
+      <li class="step reveal">
+        <div class="step-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+        </div>
+        <span class="step-num">01</span>
+        <h3>Register<br/>for Hackathon</h3>
+        <p>Sign up now to participate in the hackathon.</p>
+      </li>
+      <li class="step reveal">
+        <div class="step-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <span class="step-num">02</span>
+        <h3>Form<br/>your Teams</h3>
+        <p>Collaborate with like-minded individuals to form teams.</p>
+      </li>
+      <li class="step reveal">
+        <div class="step-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        </div>
+        <span class="step-num">03</span>
+        <h3>Choose<br/>a Challenge</h3>
+        <p>Select from the list of challenges provided.</p>
+      </li>
+      <li class="step reveal">
+        <div class="step-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <span class="step-num">04</span>
+        <h3>Innovate<br/>and Develop</h3>
+        <p>Work on your solutions, supported by resources and mentorship.</p>
+      </li>
+      <li class="step reveal">
+        <div class="step-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <span class="step-num">05</span>
+        <h3>Submit<br/>Your Solution</h3>
+        <p>Present your innovative ideas for evaluation.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CHALLENGES
+═══════════════════════════════════════════ -->
+<section id="challenges" aria-labelledby="challenges-heading">
+  <div class="section-inner">
+    <div class="section-tag reveal">CHALLENGES</div>
+    <h2 id="challenges-heading" class="section-heading reveal">Innovation<br/>Challenge Tracks</h2>
+
+    <ol class="challenges-list reveal" role="list">
+      <li class="challenge-item" tabindex="0">
+        <span class="ch-num">[ 01</span>
+        <div class="ch-thumb">
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80" alt="AI traffic challenge" loading="lazy" />
+        </div>
+        <p class="ch-desc">Develop an AI-driven solution to dynamically control traffic signals based on live camera feeds and vehicle density.</p>
+        <svg class="ch-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </li>
+      <li class="challenge-item" tabindex="0">
+        <span class="ch-num">[ 02</span>
+        <div class="ch-thumb">
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=400&q=80" alt="Health tech challenge" loading="lazy" />
+        </div>
+        <p class="ch-desc">Create a web or mobile application that integrates wearable data to provide health insights and medication reminders.</p>
+        <svg class="ch-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </li>
+      <li class="challenge-item" tabindex="0">
+        <span class="ch-num">[ 03</span>
+        <div class="ch-thumb">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&q=80" alt="Legal NLP challenge" loading="lazy" />
+        </div>
+        <p class="ch-desc">Build an NLP-based tool to scan long legal contracts and output simplified summaries with key clauses and deadlines.</p>
+        <svg class="ch-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </li>
+      <li class="challenge-item" tabindex="0">
+        <span class="ch-num">[ 04</span>
+        <div class="ch-thumb">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80" alt="Flood prediction challenge" loading="lazy" />
+        </div>
+        <p class="ch-desc">Design a predictive model using remote sensing data and live hydrology feeds to forecast and alert flood risks in urban zones.</p>
+        <svg class="ch-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </li>
+      <li class="challenge-item" tabindex="0">
+        <span class="ch-num">[ 05</span>
+        <div class="ch-thumb">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&q=80" alt="Blockchain certificate challenge" loading="lazy" />
+        </div>
+        <p class="ch-desc">Create a decentralised platform that allows institutions to issue and verify digital certificates securely.</p>
+        <svg class="ch-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </li>
+      <li class="challenge-item" tabindex="0">
+        <span class="ch-num">[ 06</span>
+        <div class="ch-thumb">
+          <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&q=80" alt="Virtual campus challenge" loading="lazy" />
+        </div>
+        <p class="ch-desc">Design a prototype that enables prospective students to explore university campuses remotely with immersive visuals.</p>
+        <svg class="ch-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </li>
+      <li class="challenge-item" tabindex="0">
+        <span class="ch-num">[ 07</span>
+        <div class="ch-thumb">
+          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80" alt="Waste classification challenge" loading="lazy" />
+        </div>
+        <p class="ch-desc">Build a machine-learning system that classifies waste into biodegradable, recyclable, and hazardous categories using a live camera feed.</p>
+        <svg class="ch-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </li>
+      <li class="challenge-item" tabindex="0">
+        <span class="ch-num">[ 08</span>
+        <div class="ch-thumb">
+          <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&q=80" alt="Offline communication challenge" loading="lazy" />
+        </div>
+        <p class="ch-desc">Develop a communication app that uses peer-to-peer protocols or SMS fallback to function in areas with limited internet.</p>
+        <svg class="ch-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </li>
+      <li class="challenge-item" tabindex="0">
+        <span class="ch-num">[ 09</span>
+        <div class="ch-thumb">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&q=80" alt="ISL translation challenge" loading="lazy" />
+        </div>
+        <p class="ch-desc">Build an AI-driven app that uses computer vision to translate ISL gestures into text and speech in multiple Indian languages.</p>
+        <svg class="ch-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </li>
+      <li class="challenge-item" tabindex="0">
+        <span class="ch-num">[ 10</span>
+        <div class="ch-thumb">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80" alt="Mental health challenge" loading="lazy" />
+        </div>
+        <p class="ch-desc">Design a conversational assistant trained to provide mental health first aid and connect users to professionals during crises.</p>
+        <svg class="ch-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     HACKATHON SCHEDULE  (Req 2: drag slider)
+═══════════════════════════════════════════ -->
+<section id="schedule" aria-labelledby="schedule-heading" class="section-alt">
+  <div class="section-inner">
+    <div class="section-tag reveal">HACKATHON SCHEDULE</div>
+    <h2 id="schedule-heading" class="section-heading reveal">Drag to explore<br/>the timeline</h2>
+
+    <!-- Draggable slider track -->
+    <div class="sl-wrap reveal">
+      <div
+        id="sl-track"
+        class="sl-track"
+        role="slider"
+        tabindex="0"
+        aria-valuemin="0"
+        aria-valuemax="4"
+        aria-valuenow="0"
+        aria-valuetext="Aug 10 — Registration Opens"
+        aria-label="Timeline slider"
+      >
+        <!-- Fill bar -->
+        <div id="sl-fill" class="sl-fill"></div>
+        <!-- Stop dots -->
+        <button class="sl-stop" style="left:0%"   aria-label="Aug 10 – Registration Opens"  data-idx="0"></button>
+        <button class="sl-stop" style="left:25%"  aria-label="Sep 01 – Team Formation"       data-idx="1"></button>
+        <button class="sl-stop" style="left:50%"  aria-label="Sep 15 – Challenge Selection"  data-idx="2"></button>
+        <button class="sl-stop" style="left:75%"  aria-label="Oct 05 – Submission Deadline"  data-idx="3"></button>
+        <button class="sl-stop" style="left:100%" aria-label="Oct 20 – Winners Announced"    data-idx="4"></button>
+        <!-- Thumb -->
+        <div id="sl-thumb" class="sl-thumb" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <!-- Milestone cards below slider -->
+    <div class="tl-cards">
+      <button class="tl-item active" data-idx="0" aria-pressed="true">
+        <time class="tl-date" datetime="2026-08-10">Aug 10</time>
+        <span class="tl-label">Registration Opens</span>
+      </button>
+      <button class="tl-item" data-idx="1" aria-pressed="false">
+        <time class="tl-date" datetime="2026-09-01">Sep 01</time>
+        <span class="tl-label">Team Formation</span>
+      </button>
+      <button class="tl-item" data-idx="2" aria-pressed="false">
+        <time class="tl-date" datetime="2026-09-15">Sep 15</time>
+        <span class="tl-label">Challenge Selection</span>
+      </button>
+      <button class="tl-item" data-idx="3" aria-pressed="false">
+        <time class="tl-date" datetime="2026-10-05">Oct 05</time>
+        <span class="tl-label">Submission Deadline</span>
+      </button>
+      <button class="tl-item" data-idx="4" aria-pressed="false">
+        <time class="tl-date" datetime="2026-10-20">Oct 20</time>
+        <span class="tl-label">Winners Announced</span>
+      </button>
+    </div>
+
+    <!-- Active milestone display -->
+    <div class="tl-active-display" aria-live="polite">
+      <h3 id="tl-active-label" class="tl-active-title">Registration Opens</h3>
+      <p id="tl-active-date" class="tl-active-date">Aug 10, 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     REWARDS AND BENEFITS
+═══════════════════════════════════════════ -->
+<section id="rewards" aria-labelledby="rewards-heading">
+  <div class="section-inner">
+    <div class="section-tag reveal">REWARDS AND BENEFITS</div>
+    <h2 id="rewards-heading" class="section-heading reveal">Win Big,<br/>Grow Bigger</h2>
+
+    <div class="rewards-grid">
+      <article class="reward-card reveal" tabindex="0">
+        <div class="reward-icon" aria-hidden="true">🏆</div>
+        <h3>Cash Prizes</h3>
+        <p class="reward-tier">First Place</p>
+        <p class="reward-amount">₹1,00,000</p>
+        <p>Plus exclusive mentorship sessions and fast-track interview opportunities with top tech companies.</p>
+      </article>
+      <article class="reward-card reward-card--secondary reveal" tabindex="0">
+        <div class="reward-icon" aria-hidden="true">🚀</div>
+        <h3>Internship &amp; Growth</h3>
+        <p class="reward-tier">All Finalists</p>
+        <p class="reward-amount">Career Boost</p>
+        <p>Internship opportunities at leading R&amp;D labs, certificates of excellence, and national recognition.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════ -->
+<section id="faq" aria-labelledby="faq-heading" class="section-alt">
+  <div class="section-inner">
+    <div class="section-tag reveal">FAQ</div>
+    <h2 id="faq-heading" class="section-heading reveal">Frequently asked<br/>questions</h2>
+
+    <dl class="faq-list reveal">
+      <div class="faq-item">
+        <dt>
+          <button
+            class="faq-q"
+            aria-expanded="true"
+            aria-controls="faq-a-1"
+            id="faq-q-1"
+          >
+            Who can participate in the hackathon?
+            <span class="faq-icon" aria-hidden="true">−</span>
+          </button>
+        </dt>
+        <dd id="faq-a-1" role="region" aria-labelledby="faq-q-1" class="faq-a">
+          Undergraduate, postgraduate, and PhD students from any recognised institution can participate. Working professionals are not eligible.
+        </dd>
+      </div>
+
+      <div class="faq-item">
+        <dt>
+          <button
+            class="faq-q"
+            aria-expanded="false"
+            aria-controls="faq-a-2"
+            id="faq-q-2"
+          >
+            Is there a registration fee?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+        </dt>
+        <dd id="faq-a-2" role="region" aria-labelledby="faq-q-2" class="faq-a" hidden>
+          No, participation is completely free for all eligible students.
+        </dd>
+      </div>
+
+      <div class="faq-item">
+        <dt>
+          <button
+            class="faq-q"
+            aria-expanded="false"
+            aria-controls="faq-a-3"
+            id="faq-q-3"
+          >
+            Can I participate solo?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+        </dt>
+        <dd id="faq-a-3" role="region" aria-labelledby="faq-q-3" class="faq-a" hidden>
+          We encourage teams of 2–4 members to collaborate, but solo entries are allowed.
+        </dd>
+      </div>
+
+      <div class="faq-item">
+        <dt>
+          <button
+            class="faq-q"
+            aria-expanded="false"
+            aria-controls="faq-a-4"
+            id="faq-q-4"
+          >
+            What rewards are offered?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+        </dt>
+        <dd id="faq-a-4" role="region" aria-labelledby="faq-q-4" class="faq-a" hidden>
+          Cash prizes, internships at top labs, and mentorship from leading industry experts in AI, sustainability, and emerging tech.
+        </dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     REGISTER CTA
+═══════════════════════════════════════════ -->
+<section id="register" aria-label="Register now call to action">
+  <div class="register-inner">
+    <div class="register-glow" aria-hidden="true"></div>
+    <div class="section-tag reveal">JOIN US</div>
+    <h2 class="section-heading reveal">Ready to Code<br/>the Future?</h2>
+    <p class="section-desc reveal">Don't miss your chance to innovate, collaborate, and win.</p>
+    <a href="https://hack2skill.com" class="btn-primary btn-lg reveal" target="_blank" rel="noopener noreferrer">Register Now ↗</a>
+  </div>
+</section>
+</main>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer id="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <a href="#hero" class="footer-logo" aria-label="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor"/>
+      </svg>
+      <span>H2S</span>
+    </a>
+
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#challenges">Challenges</a></li>
+        <li><a href="#schedule">Schedules</a></li>
+        <li><a href="#rewards">Rewards</a></li>
+        <li><a href="#faq">FAQs</a></li>
+      </ul>
+    </nav>
+
+    <p class="footer-copy">&copy; <span id="footer-year"></span> H2S Innovation Hackathon. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
